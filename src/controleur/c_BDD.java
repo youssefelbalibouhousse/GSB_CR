@@ -1,11 +1,13 @@
+package controleur;
+
 import java.sql.*;
 
-public class Main {
+public class c_BDD {
     public static void main(String[] args) throws Exception{
 
         try {
             //Charger le driver
-            //etablir la connexion C:\Users\SALLE 6\Desktop\cours Greta\ContexteGSB-V1.2\PPE\03-Gestion Compte Rendus\Version2003
+            //etablir la connexion
 
             String s = "jdbc:mysql://localhost:3306/gsb_java";
 
@@ -23,7 +25,7 @@ public class Main {
             //afficher le resultat a travers des procedes
 
             while (resultSet.next()) {
-                System.out.println(resultSet.getString("vis_nom"));
+                System.out.println(resultSet.getString("vis_prenom"));
             }
             //fermer la connexion
         } catch (Exception e) {
